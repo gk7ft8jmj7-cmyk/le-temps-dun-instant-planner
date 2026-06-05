@@ -517,8 +517,8 @@ function rRecap(){
     var rrPeriod = lastPay ? rr.filter(function(r){return r.createdAt > lastPay;}) : rr;
     var firstResa = rrPeriod.length ? rrPeriod.reduce(function(a,b){return a.createdAt<b.createdAt?a:b;}) : null;
     var periodeText = firstResa ?
-      'Du '+fd(new Date(firstResa.createdAt).toISOString().split('T')[0])+' à aujourd'hui' :
-      'Aucune réservation en cours';
+  "Du "+fd(new Date(firstResa.createdAt).toISOString().split('T')[0])+" à aujourd'hui" :
+  "Aucune réservation en cours";
     document.getElementById('recap-period').innerHTML = '<span class="recap-period-label">📅 '+periodeText+'</span>';
 
     // Tableau détail période courante
